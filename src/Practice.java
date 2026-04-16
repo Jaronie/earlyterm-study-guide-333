@@ -92,5 +92,26 @@ public class Practice {
         return odd - even;
     }
 
+    //Find the second-largest number -- HashMap Keys
+    public static int secondLargestNumber(int[] nums){
+        
+        Map<Integer, Integer> map = new HashMap<>();
+        int first = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
 
+        for(int i = 0; i < nums.length; i++){
+            map.put(nums[i], i);
+        }
+        for(int value : map.keySet()){
+            if(first < value){
+                second = first;
+                first = value;
+            }
+            else if(second < value && first > second){
+                second = value;
+            }
+        }
+
+        return second;
+    }
     }
