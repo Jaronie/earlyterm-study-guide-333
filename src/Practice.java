@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
 public class Practice {
     /**
-     * Returns the difference between the largest and smallest integer in an array.
+     * Returns the difference between the largest and smallest integer in an array. -- Array Method
      * 
      * @param nums a non-empty, non-null array of numbers
      * @return the difference between the largest and smallest number
@@ -36,6 +37,7 @@ public class Practice {
     // structures. But use a different data structure for each method. For example,
     // do maxDiff with an array, the next question with a Set, etc.
 
+    // Find the longest word that starts with a specific character letter -- HashSet
     public static String longestStartsWith(char c, String[] words){
         String word = "";
         Set<String> seen = new HashSet<>();
@@ -50,5 +52,22 @@ public class Practice {
         }
         return word;
 
+    }
+
+    //Count how many words are longer than n characters and shorter than m characters -- ArrayList
+    public static int wordsLongerAndShorterThan(String[] wordsArr, int n, int m){
+        int count = 0;
+
+        ArrayList<String> wordsArrayList = new ArrayList<>();
+        for(String w : wordsArr){
+            wordsArrayList.add(w);
+        }
+
+        for(String w : wordsArrayList){
+            if(w.length() > n && w.length() < m){
+                count++;
+            }
+        }
+        return count;
     }
     }
