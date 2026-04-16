@@ -6,9 +6,25 @@ public class Practice {
      * @return the difference between the largest and smallest number
      */
     public static int maxDiff(int[] nums) {
-        // TODO: implement this
-        return -1;
+
+        /* Array Method
+        int max = nums[0];
+        int min = nums[0]; // Creates min and max variables initialized at start of array
+
+
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] < min){ // If a num is found less than min, it will redefine itself
+                min = nums[i];
+            }
+            else if(nums[i] > max){ // Likewise with greater than values
+                max = nums[i];
+            }
+        }
+
+        return max - min;
     }
+         */
+
 
 
     // TODO: Implement the other methods from the README AND tests for each one
