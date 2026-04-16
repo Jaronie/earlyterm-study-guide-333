@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -7,7 +10,6 @@ public class Practice {
      */
     public static int maxDiff(int[] nums) {
 
-        /* Array Method
         int max = nums[0];
         int min = nums[0]; // Creates min and max variables initialized at start of array
 
@@ -20,10 +22,11 @@ public class Practice {
                 max = nums[i];
             }
         }
+    
 
         return max - min;
+
     }
-         */
 
 
 
@@ -32,4 +35,20 @@ public class Practice {
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
     // do maxDiff with an array, the next question with a Set, etc.
-}
+
+    public static String longestStartsWith(char c, String[] words){
+        String word = "";
+        Set<String> seen = new HashSet<>();
+
+        for(String w : words){
+            seen.add(w);
+        }
+        for(String w : seen){
+            if(w.startsWith(String.valueOf(c)) && w.length() > word.length()){
+                word = w;
+            }
+        }
+        return word;
+
+    }
+    }
