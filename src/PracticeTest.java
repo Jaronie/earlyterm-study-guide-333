@@ -20,6 +20,19 @@ public class PracticeTest {
     
 
     // TODO: Make tests for each problem you solve
+    @Test
+    void testlongestWordStartsWith() {
+        // Arrange
+        String[] words = {"Hey","Ambidextrous","Apple","Max","Maximum"};
+
+        // Act
+        String actual = Practice.longestStartsWith('a',words);
+
+        //Assert
+        // longest word starting with "a" = "ambidextrous"
+        assertEquals("a", actual);
+
+    }
     
 }
 
