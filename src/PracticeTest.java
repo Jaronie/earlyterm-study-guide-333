@@ -20,8 +20,10 @@ public class PracticeTest {
     
 
     // TODO: Make tests for each problem you solve
+
+    // testLongestWordStartsWith
     @Test
-    void testlongestWordStartsWith() {
+    void testLongestWordStartsWith() {
         // Arrange
         String[] words = {"Hey","Ambidextrous","Apple","Max","Maximum"};
 
@@ -31,6 +33,20 @@ public class PracticeTest {
         //Assert
         // longest word starting with "a" = "ambidextrous"
         assertEquals("a", actual);
+
+    }
+    // testWordsLongerAndShorterThan
+        @Test
+    void testWordsLongerAndShorterThan() {
+        // Arrange
+        String[] words = {"Avenged", "Sevenfold", "Is", "Awesome"};
+
+        // Act
+        int actual = Practice.wordsLongerAndShorterThan(words, 4, 8);
+
+        //Assert
+        // words longer than 4 characters but shorter than 8 = 3 { Avenged, Awesome }
+        assertEquals(2, actual);
 
     }
     
