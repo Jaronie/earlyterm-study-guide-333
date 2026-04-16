@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Practice {
@@ -70,4 +72,25 @@ public class Practice {
         }
         return count;
     }
+
+    //Find the difference between the how many odd and even numbers there are -- HashMap Values
+    public static int differenceBetweenEvenAndOdd(int[] nums){
+        int odd = 0;
+        int even = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for(int i = 0; i < nums.length; i++){
+            map.put(i, nums[i]);
+        }
+        for(int value : map.values()){
+            if(value % 2 == 0){
+                even++;
+            } else {
+                odd++;
+            }
+        }
+        return odd - even;
+    }
+
+
     }
