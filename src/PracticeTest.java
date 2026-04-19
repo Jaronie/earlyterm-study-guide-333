@@ -64,6 +64,21 @@ public class PracticeTest {
         assertEquals(2, actual);
 
     }
+
+    // testSecondLargestNum()
+    @Test
+    void testSecondLargestNum(){ 
+        //Arrange
+        int[] nums = {123,5748,891,4830};
+
+        //Act
+        int actual = Practice.secondLargestNumber(nums);
+
+        //Assert
+        //second largest = 4830
+        assertEquals(4830, actual);
+
+    }
     
 }
 
