@@ -32,7 +32,7 @@ public class PracticeTest {
 
         //Assert
         // longest word starting with "a" = "ambidextrous"
-        assertEquals("a", actual);
+        assertEquals("Ambidextrous", actual);
 
     }
     // testWordsLongerAndShorterThan
@@ -45,7 +45,22 @@ public class PracticeTest {
         int actual = Practice.wordsLongerAndShorterThan(words, 4, 8);
 
         //Assert
-        // words longer than 4 characters but shorter than 8 = 3 { Avenged, Awesome }
+        // words longer than 4 characters but shorter than 8 = 2 { Avenged, Awesome }
+        assertEquals(2, actual);
+
+    }
+
+    // testDiffBetweenEvenAndOdd
+    @Test
+    void testDiffBetweenEvenAndOdd() {
+        // Arrange
+        int[] nums = {1,2,3,4,6,8};
+
+        // Act
+        int actual = Practice.differenceBetweenEvenAndOdd(nums);
+
+        // Assert 
+        // 4 - 2 = 2
         assertEquals(2, actual);
 
     }
