@@ -48,7 +48,7 @@ public class Practice {
             seen.add(w);
         }
         for(String w : seen){
-            if(w.startsWith(String.valueOf(c)) && w.length() > word.length()){
+            if(w.toLowerCase().startsWith(String.valueOf(c).toLowerCase()) && w.length() > word.length()){
                 word = w;
             }
         }
@@ -89,7 +89,7 @@ public class Practice {
                 odd++;
             }
         }
-        return odd - even;
+        return even - odd;
     }
 
     //Find the second-largest number -- HashMap Keys
